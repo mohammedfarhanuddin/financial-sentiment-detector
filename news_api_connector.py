@@ -20,7 +20,6 @@ def fetch_news(query, max_results=10):
         'apikey': api_key,
         'q': query,
         'language': 'en',
-        'category': 'business',
         'max_results': max_results
     }
 
