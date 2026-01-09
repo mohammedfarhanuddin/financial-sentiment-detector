@@ -21,7 +21,6 @@ def fetch_news(query, max_results=10):
         'q': query,
         'language': 'en',
         'category': 'business',
-        'country': 'us',
         'max_results': max_results
     }
 
