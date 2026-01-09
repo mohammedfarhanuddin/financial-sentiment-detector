@@ -18,9 +18,7 @@ def fetch_news(query, max_results=10):
 
     params = {
         'apikey': api_key,
-        'q': query,
-        'language': 'en',
-        'size': max_results
+        'q': query
     }
 
     try:
