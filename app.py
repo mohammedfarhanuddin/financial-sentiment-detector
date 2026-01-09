@@ -13,10 +13,8 @@ st.markdown("Fetch the latest business news and analyze the overall market senti
 # User Input
 search_term = st.text_input("Enter a company or keyword (e.g., Apple, Bitcoin, S&P 500):", "Financial Markets")
 
-# API Key Handling
-if 'NEWS_API_KEY' in st.secrets:
-    api_key = st.secrets['NEWS_API_KEY']
-else:
+# Check for API Key in Secrets (Optional, for better UX)
+if 'NEWS_API_KEY' not in st.secrets:
     st.error("API Key not found. Please configure 'NEWS_API_KEY' in your Streamlit secrets.")
     st.stop()
 
@@ -25,7 +23,8 @@ if st.button("Analyze Sentiment"):
     
     with st.spinner(f"Fetching and analyzing news for '{search_term}'..."):
         # 1. Fetch News (from news_api_connector.py)
-        articles = fetch_news(api_key, search_term, max_results=20)
+        # API Key is handled inside fetch_news
+        articles = fetch_news(search_term, max_results=20)
 
         if not articles:
             st.warning(f"No recent articles found for '{search_term}' or API key is missing/invalid.")
