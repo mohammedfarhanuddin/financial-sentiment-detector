@@ -31,9 +31,9 @@ def fetch_news(query, max_results=10):
 
     params = {
         "apikey": api_key,
-        "q": query,
+        "category": "business",
         "language": "en",
-        "size": max_results * 3  # fetch extra so filtering still gives enough
+        "size": max_results * 3
     }
 
     try:
