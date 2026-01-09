@@ -1,0 +1,7 @@
+Step 1: Install Dependencies
+Open your terminal/command prompt, navigate to your project folder, and run the following command to install all necessary Python libraries:
+pip install -r requirements.txt
+
+Step 2: Run the Application
+Start the Streamlit application from your terminal:
+streamlit run app.py
