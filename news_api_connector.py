@@ -30,10 +30,7 @@ def fetch_news(query, max_results=10):
     api_key = st.secrets["NEWS_API_KEY"]
 
     params = {
-        "apikey": api_key,
-        "category": "business",
-        "language": "en",
-        "size": max_results * 3
+        "apikey": api_key
     }
 
     try:
